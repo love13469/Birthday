@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Butki Rani</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to bottom right, #ffdee9, #b5fffc);
+      overflow: hidden;
+      text-align: center;
+      color: #333;
+    }
+    h1 {
+      margin-top: 60px;
+      font-size: 3rem;
+      color: #e91e63;
+    }
+    .message {
+      max-width: 700px;
+      margin: 20px auto;
+      font-size: 1.2rem;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    .footer {
+      margin-top: 40px;
+      font-weight: bold;
+      color: #880e4f;
+    }
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: float 8s linear infinite;
+    }
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+    @keyframes float {
+      0% {
+        transform: translateY(100vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Happy Birthday Butki Rani 💖</h1>
+
+  <div class="message">
+    <p>
+      My dearest Butki Rani,<br><br>
+      Happy Birthday Butki Love u sooooooooooooooooooooo much meri jaan love u so much bhagavn tumhe or humari  jodi ko hamesha selamat rakhe or tmhe hamesha khush raho love u so much meri jaan 💘
+    </p>
+  </div>
+
+  <div class="footer">
+    Forever yours,<br>
+    Gaurav ❤️
+  </div>
+
+  <script>
+    const createHeart = () => {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 2 + 3) + 's';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 8000);
+    };
+    setInterval(createHeart, 300);
+  </script>
+</body>
+</html>
